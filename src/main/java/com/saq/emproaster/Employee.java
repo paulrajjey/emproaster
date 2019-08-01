@@ -11,6 +11,16 @@ public class Employee implements java.io.Serializable {
 	private java.lang.String code;
 	private java.lang.String name;
 
+	private com.saq.emproaster.Contract contract;
+
+	private java.util.List<com.saq.emproaster.DayOffRequest> dayOffRequests;
+
+	private java.util.List<com.saq.emproaster.DayOnRequest> dayOnRequests;
+
+	private java.util.List<com.saq.emproaster.ShiftOffRequest> shiftOffRequests;
+
+	private java.util.List<com.saq.emproaster.ShiftOnRequest> shiftOnRequests;
+
 	public Employee() {
 	}
 
@@ -30,9 +40,65 @@ public class Employee implements java.io.Serializable {
 		this.name = name;
 	}
 
-	public Employee(java.lang.String code, java.lang.String name) {
+	public com.saq.emproaster.Contract getContract() {
+		return this.contract;
+	}
+
+	public void setContract(com.saq.emproaster.Contract contract) {
+		this.contract = contract;
+	}
+
+	public java.util.List<com.saq.emproaster.DayOffRequest> getDayOffRequests() {
+		return this.dayOffRequests;
+	}
+
+	public void setDayOffRequests(
+			java.util.List<com.saq.emproaster.DayOffRequest> dayOffRequests) {
+		this.dayOffRequests = dayOffRequests;
+	}
+
+	public java.util.List<com.saq.emproaster.DayOnRequest> getDayOnRequests() {
+		return this.dayOnRequests;
+	}
+
+	public void setDayOnRequests(
+			java.util.List<com.saq.emproaster.DayOnRequest> dayOnRequests) {
+		this.dayOnRequests = dayOnRequests;
+	}
+
+	public java.util.List<com.saq.emproaster.ShiftOffRequest> getShiftOffRequests() {
+		return this.shiftOffRequests;
+	}
+
+	public void setShiftOffRequests(
+			java.util.List<com.saq.emproaster.ShiftOffRequest> shiftOffRequests) {
+		this.shiftOffRequests = shiftOffRequests;
+	}
+
+	public java.util.List<com.saq.emproaster.ShiftOnRequest> getShiftOnRequests() {
+		return this.shiftOnRequests;
+	}
+
+	public void setShiftOnRequests(
+			java.util.List<com.saq.emproaster.ShiftOnRequest> shiftOnRequests) {
+		this.shiftOnRequests = shiftOnRequests;
+	}
+
+	public Employee(
+			java.lang.String code,
+			java.lang.String name,
+			com.saq.emproaster.Contract contract,
+			java.util.List<com.saq.emproaster.DayOffRequest> dayOffRequests,
+			java.util.List<com.saq.emproaster.DayOnRequest> dayOnRequests,
+			java.util.List<com.saq.emproaster.ShiftOffRequest> shiftOffRequests,
+			java.util.List<com.saq.emproaster.ShiftOnRequest> shiftOnRequests) {
 		this.code = code;
 		this.name = name;
+		this.contract = contract;
+		this.dayOffRequests = dayOffRequests;
+		this.dayOnRequests = dayOnRequests;
+		this.shiftOffRequests = shiftOffRequests;
+		this.shiftOnRequests = shiftOnRequests;
 	}
 
 }
