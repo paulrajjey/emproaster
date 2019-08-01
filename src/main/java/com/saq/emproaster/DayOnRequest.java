@@ -6,12 +6,44 @@ package com.saq.emproaster;
 
 public class DayOnRequest implements java.io.Serializable {
 
-    static final long serialVersionUID = 1L;
+	static final long serialVersionUID = 1L;
 
-    public DayOnRequest() {
-    }
+	private com.saq.emproaster.Employee employee;
+	private com.saq.emproaster.ShiftDate shiftDate;
+	private int weight;
 
+	public DayOnRequest() {
+	}
 
+	public com.saq.emproaster.Employee getEmployee() {
+		return this.employee;
+	}
 
+	public void setEmployee(com.saq.emproaster.Employee employee) {
+		this.employee = employee;
+	}
+
+	public com.saq.emproaster.ShiftDate getShiftDate() {
+		return this.shiftDate;
+	}
+
+	public void setShiftDate(com.saq.emproaster.ShiftDate shiftDate) {
+		this.shiftDate = shiftDate;
+	}
+
+	public int getWeight() {
+		return this.weight;
+	}
+
+	public void setWeight(int weight) {
+		this.weight = weight;
+	}
+
+	public DayOnRequest(com.saq.emproaster.Employee employee,
+			com.saq.emproaster.ShiftDate shiftDate, int weight) {
+		this.employee = employee;
+		this.shiftDate = shiftDate;
+		this.weight = weight;
+	}
 
 }
