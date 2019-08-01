@@ -13,6 +13,8 @@ public class ShiftDate implements java.io.Serializable {
 
 	private com.saq.emproaster.DayOfWeek dayOfWeek;
 
+	private java.util.List<com.saq.emproaster.Shift> shiftList;
+
 	public ShiftDate() {
 	}
 
@@ -40,11 +42,21 @@ public class ShiftDate implements java.io.Serializable {
 		this.dayOfWeek = dayOfWeek;
 	}
 
+	public java.util.List<com.saq.emproaster.Shift> getShiftList() {
+		return this.shiftList;
+	}
+
+	public void setShiftList(java.util.List<com.saq.emproaster.Shift> shiftList) {
+		this.shiftList = shiftList;
+	}
+
 	public ShiftDate(int dayIndex, java.lang.String dateString,
-			com.saq.emproaster.DayOfWeek dayOfWeek) {
+			com.saq.emproaster.DayOfWeek dayOfWeek,
+			java.util.List<com.saq.emproaster.Shift> shiftList) {
 		this.dayIndex = dayIndex;
 		this.dateString = dateString;
 		this.dayOfWeek = dayOfWeek;
+		this.shiftList = shiftList;
 	}
 
 }
