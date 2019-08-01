@@ -50,6 +50,26 @@ public class ShiftDate implements java.io.Serializable {
 		this.shiftList = shiftList;
 	}
 
+    public int getWeekendSundayIndex() {
+        switch (dayOfWeek) {
+            case MONDAY:
+                return dayIndex - 1;
+            case TUESDAY:
+                return dayIndex - 2;
+            case WEDNESDAY:
+                return dayIndex - 3;
+            case THURSDAY:
+                return dayIndex + 3;
+            case FRIDAY:
+                return dayIndex + 2;
+            case SATURDAY:
+                return dayIndex + 1;
+            case SUNDAY:
+                return dayIndex;
+            default:
+                throw new IllegalArgumentException("The dayOfWeek (" + dayOfWeek + ") is not valid.");
+        }
+    }
 	public ShiftDate(int dayIndex, java.lang.String dateString,
 			com.saq.emproaster.DayOfWeek dayOfWeek,
 			java.util.List<com.saq.emproaster.Shift> shiftList) {
