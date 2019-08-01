@@ -10,7 +10,7 @@ public class DayOfWeek implements java.io.Serializable {
 
     static final long serialVersionUID = 1L;
 
-MONDAY("Monday"),
+    MONDAY("Monday"),
     TUESDAY("Tuesday"),
     WEDNESDAY("Wednesday"),
     THURSDAY("Thursday"),
