@@ -11,6 +11,8 @@ public class ShiftDate implements java.io.Serializable {
 	private int dayIndex;
 	private java.lang.String dateString;
 
+	private com.saq.emproaster.DayOfWeek dayOfWeek;
+
 	public ShiftDate() {
 	}
 
@@ -30,9 +32,19 @@ public class ShiftDate implements java.io.Serializable {
 		this.dateString = dateString;
 	}
 
-	public ShiftDate(int dayIndex, java.lang.String dateString) {
+	public com.saq.emproaster.DayOfWeek getDayOfWeek() {
+		return this.dayOfWeek;
+	}
+
+	public void setDayOfWeek(com.saq.emproaster.DayOfWeek dayOfWeek) {
+		this.dayOfWeek = dayOfWeek;
+	}
+
+	public ShiftDate(int dayIndex, java.lang.String dateString,
+			com.saq.emproaster.DayOfWeek dayOfWeek) {
 		this.dayIndex = dayIndex;
 		this.dateString = dateString;
+		this.dayOfWeek = dayOfWeek;
 	}
 
 }
