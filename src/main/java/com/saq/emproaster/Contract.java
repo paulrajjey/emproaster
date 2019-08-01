@@ -6,12 +6,33 @@ package com.saq.emproaster;
 
 public class Contract implements java.io.Serializable {
 
-    static final long serialVersionUID = 1L;
+	static final long serialVersionUID = 1L;
 
-    public Contract() {
-    }
+	private java.lang.String code;
+	private java.lang.String description;
 
+	public Contract() {
+	}
 
+	public java.lang.String getCode() {
+		return this.code;
+	}
 
+	public void setCode(java.lang.String code) {
+		this.code = code;
+	}
+
+	public java.lang.String getDescription() {
+		return this.description;
+	}
+
+	public void setDescription(java.lang.String description) {
+		this.description = description;
+	}
+
+	public Contract(java.lang.String code, java.lang.String description) {
+		this.code = code;
+		this.description = description;
+	}
 
 }
