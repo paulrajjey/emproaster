@@ -11,6 +11,8 @@ public class Shift implements java.io.Serializable {
 	private com.saq.emproaster.ShiftDate shiftDate;
 	private int requiredEmployeeSize;
 
+	private com.saq.emproaster.ShiftType shiftType;
+
 	public Shift() {
 	}
 
@@ -30,10 +32,19 @@ public class Shift implements java.io.Serializable {
 		this.requiredEmployeeSize = requiredEmployeeSize;
 	}
 
+	public com.saq.emproaster.ShiftType getShiftType() {
+		return this.shiftType;
+	}
+
+	public void setShiftType(com.saq.emproaster.ShiftType shiftType) {
+		this.shiftType = shiftType;
+	}
+
 	public Shift(com.saq.emproaster.ShiftDate shiftDate,
-			int requiredEmployeeSize) {
+			int requiredEmployeeSize, com.saq.emproaster.ShiftType shiftType) {
 		this.shiftDate = shiftDate;
 		this.requiredEmployeeSize = requiredEmployeeSize;
+		this.shiftType = shiftType;
 	}
 
 }
