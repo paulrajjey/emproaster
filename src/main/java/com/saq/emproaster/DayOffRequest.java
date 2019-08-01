@@ -6,12 +6,33 @@ package com.saq.emproaster;
 
 public class DayOffRequest implements java.io.Serializable {
 
-    static final long serialVersionUID = 1L;
+	static final long serialVersionUID = 1L;
 
-    public DayOffRequest() {
-    }
+	private com.saq.emproaster.Employee employee;
+	private int weight;
 
+	public DayOffRequest() {
+	}
 
+	public com.saq.emproaster.Employee getEmployee() {
+		return this.employee;
+	}
 
+	public void setEmployee(com.saq.emproaster.Employee employee) {
+		this.employee = employee;
+	}
+
+	public int getWeight() {
+		return this.weight;
+	}
+
+	public void setWeight(int weight) {
+		this.weight = weight;
+	}
+
+	public DayOffRequest(com.saq.emproaster.Employee employee, int weight) {
+		this.employee = employee;
+		this.weight = weight;
+	}
 
 }
