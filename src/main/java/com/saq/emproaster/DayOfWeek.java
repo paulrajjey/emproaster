@@ -8,7 +8,6 @@ import java.util.Calendar;
 
 public enum DayOfWeek  {
 
-    static final long serialVersionUID = 1L;
 
     MONDAY("Monday"),
     TUESDAY("Tuesday"),
