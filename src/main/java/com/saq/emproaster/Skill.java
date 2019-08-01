@@ -6,12 +6,23 @@ package com.saq.emproaster;
 
 public class Skill implements java.io.Serializable {
 
-    static final long serialVersionUID = 1L;
+	static final long serialVersionUID = 1L;
 
-    public Skill() {
-    }
+	private java.lang.String code;
 
+	public Skill() {
+	}
 
+	public java.lang.String getCode() {
+		return this.code;
+	}
 
+	public void setCode(java.lang.String code) {
+		this.code = code;
+	}
+
+	public Skill(java.lang.String code) {
+		this.code = code;
+	}
 
 }
