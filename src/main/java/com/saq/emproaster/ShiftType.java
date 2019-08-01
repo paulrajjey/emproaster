@@ -6,12 +6,75 @@ package com.saq.emproaster;
 
 public class ShiftType implements java.io.Serializable {
 
-    static final long serialVersionUID = 1L;
+	static final long serialVersionUID = 1L;
 
-    public ShiftType() {
-    }
+	private java.lang.String code;
+	private int index;
+	private java.lang.String startTimeString;
+	private java.lang.String endTimeString;
+	private boolean night;
+	private java.lang.String description;
 
+	public ShiftType() {
+	}
 
+	public java.lang.String getCode() {
+		return this.code;
+	}
 
+	public void setCode(java.lang.String code) {
+		this.code = code;
+	}
+
+	public int getIndex() {
+		return this.index;
+	}
+
+	public void setIndex(int index) {
+		this.index = index;
+	}
+
+	public java.lang.String getStartTimeString() {
+		return this.startTimeString;
+	}
+
+	public void setStartTimeString(java.lang.String startTimeString) {
+		this.startTimeString = startTimeString;
+	}
+
+	public java.lang.String getEndTimeString() {
+		return this.endTimeString;
+	}
+
+	public void setEndTimeString(java.lang.String endTimeString) {
+		this.endTimeString = endTimeString;
+	}
+
+	public boolean isNight() {
+		return this.night;
+	}
+
+	public void setNight(boolean night) {
+		this.night = night;
+	}
+
+	public java.lang.String getDescription() {
+		return this.description;
+	}
+
+	public void setDescription(java.lang.String description) {
+		this.description = description;
+	}
+
+	public ShiftType(java.lang.String code, int index,
+			java.lang.String startTimeString, java.lang.String endTimeString,
+			boolean night, java.lang.String description) {
+		this.code = code;
+		this.index = index;
+		this.startTimeString = startTimeString;
+		this.endTimeString = endTimeString;
+		this.night = night;
+		this.description = description;
+	}
 
 }
