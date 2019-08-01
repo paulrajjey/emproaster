@@ -11,6 +11,8 @@ public class DayOffRequest implements java.io.Serializable {
 	private com.saq.emproaster.Employee employee;
 	private int weight;
 
+	private com.saq.emproaster.ShiftDate shiftDate;
+
 	public DayOffRequest() {
 	}
 
@@ -30,9 +32,19 @@ public class DayOffRequest implements java.io.Serializable {
 		this.weight = weight;
 	}
 
-	public DayOffRequest(com.saq.emproaster.Employee employee, int weight) {
+	public com.saq.emproaster.ShiftDate getShiftDate() {
+		return this.shiftDate;
+	}
+
+	public void setShiftDate(com.saq.emproaster.ShiftDate shiftDate) {
+		this.shiftDate = shiftDate;
+	}
+
+	public DayOffRequest(com.saq.emproaster.Employee employee, int weight,
+			com.saq.emproaster.ShiftDate shiftDate) {
 		this.employee = employee;
 		this.weight = weight;
+		this.shiftDate = shiftDate;
 	}
 
 }
